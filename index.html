@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>“あの”ゲーム</h1>
+    </header>
+    <details id="rule_box">
+        <summary>遊び方</summary>
+        <img src="img/rule.png" alt="ゲームのルール">
+    </details>
+
+    <main>
+        <!-- スタート画面（初期値をセット） -->
+        <div id="start">
+            <div class="kakegoe">
+                <h2>
+                掛け声入力：<input type="text" id="kakegoeran" value="いっせーのせ！">
+                </h2>
+            </div>
+            <button id="reset">入力した掛け声ではじめる</button>
+        </div>
+        <!-- ゲーム画面 -->
+        <div class="gamefield">
+            <div class="pcfield">
+                </div>
+
+            <!-- ：直前の手形画像を表示するエリア -->
+                <div class="last_hands_area">
+                    <div class="hand_box">
+                        <span>相手</span>
+                        <img id="pc_hand_img" src="img/thmb0.png" alt="相手の手">
+                        <img id="pc_win_img" src="img/pose_win_boy.png" alt="勝ち" style="display: none;">
+                    </div>
+                <div id="kakegoe"><span id="call_disp"></span></div>
+                    <div class="hand_box">
+                        <img id="my_hand_img" src="img/thmb0.png" alt="自分の手">
+                        <img id="my_win_img" src="img/pose_win_boy.png" alt="勝ち" style="display: none;">
+                        <span>あなた</span>
+                    </div>
+                </div>
+
+                <div id="judgefield" style="display: none;">
+                <div id="judgment">最初にUPする指を選んでね！</div>
+                </div>
+
+           <!-- 自分側：残機・ステータス表示 -->
+            <div class="myfield">
+                <div class="clickfield">          
+                    <ul class="call">
+                        <li id="call_0">0</li>
+                        <li id="call_1">1</li>
+                        <li id="call_2">2</li>
+                        <li id="call_3">3</li>
+                        <li id="call_4">4</li>
+                    </ul>
+
+                    <!-- <div>私の上げた指の数「<span id="myup"></span>」</div> -->
+                    <ul class="up">
+                        <li id="up_0">0</li>
+                        <li id="up_1">1</li>
+                        <li id="up_2">2</li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
