@@ -57,7 +57,7 @@
             // 【ゲーム継続中】
             $("#start").hide(); //はじめるボタンを隠す
             $("#judgefield").show();　//補助コメント欄を表示する
-            $("#pc_hand_img, #my_hand_img").removeClass("wait_gray"); // 指のグレーアウトを解除！
+            $("#pc_hand_img, #my_hand_img").removeClass("wait_gray"); // 指のグレーアウトを解除
             
             var maxCall = myHands + pcHands;
 
@@ -221,7 +221,7 @@
             $("#myup").html("");
             $("#mycall").html("");
             $("#sumup").html("");
-            $("#judgment").html("相手のコールからはじめるよ！<br>自分のUPする指を選んでね！");
+            $("#judgment").html("あなたが先攻ではじめるよ！<br>自分のUPする指を選んでね！");
             $("#call_disp").html("");
 
             // 画像を初期表示（0本）に戻す
